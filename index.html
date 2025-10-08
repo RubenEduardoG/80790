@@ -2,21 +2,99 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Proyecto Coderhouse</title>
+  <title>DyD</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./css/style.css">
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+   <script src="js/carrito.js" defer></script>
   <script src="js/script.js" defer></script>
-  <script src="js/producto.js" defer></script>
-  <script src="js/carrito.js" defer></script>
+   <link rel="icon" type="image/png" href="img/Logodyd.png"/>
+  <nav class="site-nav">
+  <a href="index.html"     class="nav-link">Inicio</a>
+  <a href="/js/producto.html" class="nav-link">Productos</a>
+  <a href="/js/carrito.html"   class="nav-link">Carrito</a>
+  <a href="/js/contacto.html"  class="nav-link">Contacto</a>
+</nav>
+
   
 </head>
 <body>
-  <h1>Mi Tienda Natural 🌱</h1>
+  <header class="site-header">
+    <h1>DyD Plegados - Taller Metalúrgico</h1>
+    <p class="subtitle">Soldadura, corte y fabricaciones a medida</p>
+  </header>
 
-  <div id="productos"></div>
+  <div class="cinta-publicidad">
+  <div class="cinta-contenido">
+    <img src="img/chapas.jpeg" alt="Publicidad 1">
+    <img src="img/maquina1.jpeg" alt="Publicidad 2">
+    <img src="img/mesadetrabajo.jpeg" alt="Publicidad 3">
+    <img src="img/pedidoamedida.jpeg" alt="Publicidad 4">
+    <img src="img/tallerentero.jpeg" alt="Publicidad 5">
+    <img src="img/trabajoterminado.jpeg" alt="Publicidad 6">
+    <!-- Se repiten para que la cinta sea continua -->
+    <img src="img/chapas.jpeg" alt="Publicidad 1">
+    <img src="img/maquina1.jpeg" alt="Publicidad 2">
+    <img src="img/mesadetrabajo.jpeg" alt="Publicidad 3">
+    <img src="img/pedidoamedida.jpeg" alt="Publicidad 4">
+    <img src="img/tallerentero.jpeg" alt="Publicidad 5">
+    <img src="img/trabajoterminado.jpeg" alt="Publicidad 6">
+        <!-- Se repiten para que la cinta sea continua -->
+    <img src="img/chapas.jpeg" alt="Publicidad 1">
+    <img src="img/maquina1.jpeg" alt="Publicidad 2">
+    <img src="img/mesadetrabajo.jpeg" alt="Publicidad 3">
+    <img src="img/pedidoamedida.jpeg" alt="Publicidad 4">
+    <img src="img/tallerentero.jpeg" alt="Publicidad 5">
+    <img src="img/trabajoterminado.jpeg" alt="Publicidad 6">
+        <!-- Se repiten para que la cinta sea continua -->
+    <img src="img/chapas.jpeg" alt="Publicidad 1">
+    <img src="img/maquina1.jpeg" alt="Publicidad 2">
+    <img src="img/mesadetrabajo.jpeg" alt="Publicidad 3">
+    <img src="img/pedidoamedida.jpeg" alt="Publicidad 4">
+    <img src="img/tallerentero.jpeg" alt="Publicidad 5">
+    <img src="img/trabajoterminado.jpeg" alt="Publicidad 6">
+        <!-- Se repiten para que la cinta sea continua -->
+    <img src="img/chapas.jpeg" alt="Publicidad 1">
+    <img src="img/maquina1.jpeg" alt="Publicidad 2">
+    <img src="img/mesadetrabajo.jpeg" alt="Publicidad 3">
+    <img src="img/pedidoamedida.jpeg" alt="Publicidad 4">
+    <img src="img/tallerentero.jpeg" alt="Publicidad 5">
+    <img src="img/trabajoterminado.jpeg" alt="Publicidad 6">
+  </div>
+</div>
 
-  <h2>Carrito 🛒</h2>
-  <ul id="carrito"></ul>
-  <p>Total: $<span id="total">0</span></p>
+  <main class="container">
+    <section class="left">
+      <h2>Agregar Producto</h2>
+      <div id="productos" class="grid"></div>
 
+      <h3>Tienda de materiales para la construcción
+Realizamos corte, plegado, cilindrado y punzonado de chapas.
+Desde *0.5mm* hasta *6,35mm* de espesor de chapa</h3>
+      <form id="add-product-form" class="card form">
+        <label>Gmail
+          <input name="gmail" required placeholder="dydplegados@gmail.com" />
+        </label>
+        <label>Unidad
+          <input name="unit" required placeholder="ej: 1 unidad / 5 kg" />
+        </label>
+        <label>Imagen (URL opcional)
+          <input name="image" type="url" placeholder="https://google.drive" />
+        </label>
+        <div class="form-row">
+          <button type="submit">Agregar producto</button>
+          <div id="add-product-msg" class="msg"></div>
+        </div>
+      </form>
+    </section>
+
+    
+  </main>
+
+  <footer class="site-footer">
+    <small> Ruben Gutierrez | DyD Plegados</small>
+  </footer>
+
+  <script src="./js/app.js" defer></script>
 </body>
 </html>
