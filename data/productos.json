@@ -1,0 +1,8 @@
+[
+  { "id": 1, "nombre": "Plegado industrial", "precio": 2500, "unidad": "1 unidad", "imagen": "https://via.placeholder.com/400x300?text=Plegado" },
+  { "id": 2, "nombre": "Soldadura MIG",      "precio": 1800, "unidad": "por hora", "imagen": "https://via.placeholder.com/400x300?text=Soldadura" },
+  { "id": 3, "nombre": "Corte láser",         "precio": 1200, "unidad": "m²",      "imagen": "https://via.placeholder.com/400x300?text=Corte" },
+  { "id": 4, "nombre": "Cilindrado de chapa", "precio": 3200, "unidad": "por metro", "imagen": "https://via.placeholder.com/400x300?text=Cilindrado" },
+  { "id": 5, "nombre": "Punzonado",           "precio": 900,  "unidad": "100 perforaciones", "imagen": "https://via.placeholder.com/400x300?text=Punzonado" },
+  { "id": 6, "nombre": "Material chapa SAE",  "precio": 7000, "unidad": "por hoja", "imagen": "https://via.placeholder.com/400x300?text=Chapa+SAE" }
+]

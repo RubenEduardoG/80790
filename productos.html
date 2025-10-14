@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>DyD · Productos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="img/Logodyd.png" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Librería externa (modales) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <!-- JS del proyecto (orden importa con defer) -->
+  <script src="js/carrito.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>DyD Plegados - Taller Metalúrgico</h1>
+    <p class="subtitle">Soldadura, corte y fabricaciones a medida</p>
+    <nav class="site-nav">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="productos.html" class="nav-link active" aria-current="page">Productos</a>
+      <a href="carrito.html" class="nav-link">Carrito</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Columna izquierda: catálogo + admin -->
+    <section class="left">
+      <h2>Servicios / Productos</h2>
+
+      <!-- Grid dinámico (lo renderiza script.js) -->
+      <div id="productos" class="grid"></div>
+
+      <!-- Form admin (tal cual me lo pasaste) -->
+      <h3>Agregar producto</h3>
+      <form id="add-product-form" class="card form">
+        <label>Nombre
+          <input name="name" required placeholder="Ej: Plegado industrial" />
+        </label>
+        <label>Precio
+          <input name="price" type="number" step="0.01" min="0.01" required placeholder="Ej: 2500" />
+        </label>
+        <label>Unidad
+          <input name="unit" required placeholder="Ej: 1 unidad / por hora / m²" />
+        </label>
+        <label>Imagen (URL opcional)
+          <input name="image" type="url" placeholder="https://..." />
+        </label>
+        <div class="form-row">
+          <button type="submit">Agregar producto</button>
+          <div id="add-product-msg" class="msg"></div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Columna derecha: carrito -->
+    <aside class="right card">
+      <h2>Carrito</h2>
+      <div id="cart-list"></div>
+      <div class="cart-summary" style="margin-top:12px;">
+        <strong>Total: $<span id="cart-total">0.00</span></strong>
+      </div>
+      <div class="cart-actions" style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
+        <button id="clear-cart" class="secondary">Vaciar</button>
+        <button id="checkout-btn">Finalizar compra</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <small>Rubén Gutierrez | DyD Plegados</small>
+  </footer>
+</body>
+</html>

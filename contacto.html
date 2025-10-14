@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>DyD · Contacto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script src="js/carrito.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>DyD Plegados - Taller Metalúrgico</h1>
+    <p class="subtitle">Soldadura, corte y fabricaciones a medida</p>
+    <nav class="site-nav">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="productos.html" class="nav-link">Productos</a>
+      <a href="carrito.html" class="nav-link">Carrito</a>
+      <a href="contacto.html" class="nav-link active">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container" style="grid-template-columns: 1fr;">
+    <section class="card" id="contact-info">
+      <h2>Contacto</h2>
+      <p><strong>Empresa:</strong> DyD Plegados</p>
+      <p><strong>Email:</strong> <a href="mailto:dydplegados@gmail.com">dydplegados@gmail.com</a></p>
+      <p><strong>Teléfono:</strong> <a href="tel:+5400000000">+54 00 0000-0000</a></p>
+      <p><strong>Ubicación:</strong> Córdoba, Argentina</p>
+    </section>
+
+    <section class="card" id="contact-form">
+      <h3>Escribinos</h3>
+      <form onsubmit="event.preventDefault(); if (window.Swal) Swal.fire('¡Gracias!','Te responderemos a la brevedad.','success')">
+        <label>Nombre
+          <input required placeholder="Tu nombre" />
+        </label>
+        <label>Email
+          <input type="email" required placeholder="tucorreo@ejemplo.com" />
+        </label>
+        <label>Mensaje
+          <input required placeholder="¿En qué podemos ayudarte?" />
+        </label>
+        <div class="form-row">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Rubén Gutierrez | DyD Plegados</small>
+  </footer>
+</body>
+</html>

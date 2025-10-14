@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>DyD · Carrito</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="img/Logodyd.png" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Librería externa (modales) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <!-- JS del proyecto (orden importa con defer) -->
+  <script src="js/carrito.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>DyD Plegados - Taller Metalúrgico</h1>
+    <p class="subtitle">Soldadura, corte y fabricaciones a medida</p>
+    <nav class="site-nav">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="productos.html" class="nav-link">Productos</a>
+      <a href="carrito.html" class="nav-link active" aria-current="page">Carrito</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Página de 1 columna -->
+  <main class="container single-col">
+    <section class="card">
+      <h2>Tu carrito</h2>
+
+      <!-- Lista dinámica renderizada por script.js (renderCarrito) -->
+      <div id="cart-list"></div>
+
+      <!-- Total dinámico -->
+      <div class="cart-summary" style="margin-top:12px;">
+        <strong>Total: $<span id="cart-total">0.00</span></strong>
+      </div>
+
+      <!-- Acciones -->
+      <div class="cart-actions" style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
+        <button id="clear-cart" class="secondary">Vaciar</button>
+        <button id="checkout-btn">Finalizar compra</button>
+        <a class="btn-cta" href="productos.html">Seguir comprando</a>
+      </div>
+
+      <!-- Mini guía de flujo (para el profe) -->
+      <div class="card" style="margin-top:14px; background:#0f1a39;">
+        <h3 style="margin-top:0;">Flujo simulado de compra</h3>
+        <ol style="margin:0; padding-left:18px;">
+          <li>Agregar productos desde <em>Productos</em>.</li>
+          <li>Editar cantidades / eliminar en esta página.</li>
+          <li>Ver total actualizado automáticamente.</li>
+          <li>Finalizar compra → completar datos → se genera N° de orden.</li>
+          <li>Se vacía el carrito tras confirmar (persistencia por localStorage).</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Rubén Gutierrez | DyD Plegados</small>
+  </footer>
+</body>
+</html>
