@@ -1,4 +1,3 @@
-// js/script.js
 document.addEventListener('DOMContentLoaded', () => {
   // ---------- Utils ----------
   const $ = s => document.querySelector(s);
@@ -9,9 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ? text
       : text.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-  // ---------- Carga de catálogo (LS -> fetch -> window.productos -> fallback) ----------
   async function loadProducts() {
-    // 1) Catálogo extendido por admin (localStorage)
     try {
       const ls = localStorage.getItem('dyd_products_v1');
       if (ls) {
@@ -22,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
       console.warn('No se pudo leer dyd_products_v1', e);
     }
 
-    // 2) JSON remoto simulado (intentamos varias rutas y nombres)
     const candidates = [
       '/data/productos.json',
       '/data/products.json',
